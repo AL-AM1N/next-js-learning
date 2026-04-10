@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../components/Title";
+import StoryCard from "../components/StoryCard";
 
 const devStories = [
     {
@@ -77,7 +78,7 @@ const Stories = () => {
       <div>
         {
           devStories.map((story) => {
-           return <li key={story.id}>{story.name}</li>
+           return <StoryCard key={story.id} story={story}></StoryCard>
           })
         }
       </div>
