@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Hearder = () => {
+  const pathName = usePathname();
+  console.log(pathName);
+  if(pathName.startsWith("/dashboard")) return <></>;
   return (
     <header className="flex justify-between items-center p-4 border-b-2">
       <Link href={"/"} className="text-lg">🌊 Dev-Story</Link>
