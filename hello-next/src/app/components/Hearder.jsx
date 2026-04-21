@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import NavLink from "./NavLink";
 
 const Hearder = () => {
   const pathName = usePathname();
@@ -11,11 +12,11 @@ const Hearder = () => {
     <header className="flex justify-between items-center p-4 border-b-2">
       <Link href={"/"} className="text-lg">🌊 Dev-Story</Link>
       <nav className="space-x-5">
-        <Link href="/about">About</Link>
-        <Link href="/stories">Stories</Link>
-        <Link href="/tutorials">Tutorials</Link>
-        <Link href="/login">Login</Link>
-        <Link href="/register">Register</Link>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/stories">Stories</NavLink>
+        <NavLink href="/tutorials">Tutorials</NavLink>
+        <NavLink href="/login">Login</NavLink>
+        <NavLink href="/register">Register</NavLink>
       </nav>
     </header>
   );
